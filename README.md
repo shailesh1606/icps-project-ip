@@ -1,5 +1,16 @@
 # ICPS — Insurance Claim Processing System
 
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Java-17-orange?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Spring%20Boot-3.x-brightgreen?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/React-Frontend-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/MongoDB-Database-green?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Microservices-Architecture-purple?style=for-the-badge" />
+</p>
+
+---
+
 A full-stack microservices application built with Spring Boot, React + TypeScript, and MongoDB, providing secure authentication, policy management, and end‑to‑end insurance claim submission, review, and payment processing.
 
 ---
