@@ -210,22 +210,22 @@ jwt.expiry=86400000   # 24 hours in ms
 ## Screenshots
 
 ### Login Page
-![Login Page](screenshots/login.png)
+![Login Page](ICPS Screenshots/login.png)
 
 ### Registration Page
-![Registration Page](screenshots/register.png)
+![Registration Page](ICPS Screenshots/register.png)
 
 ### Policyholder Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](ICPS Screenshots/dashboard.png)
 
 ### Submit a Claim
-![Submit Claim](screenshots/submit-claim.png)
+![Submit Claim](ICPS Screenshots/submit-claim.png)
 
 ### Admin Panel — Review & Approve Claims
-![Admin Panel](screenshots/admin-panel.png)
+![Admin Panel](ICPS Screenshots/admin-panel.png)
 
 ### Claim Approved → Payment Created
-![Payment Flow](screenshots/payment-flow.png)
+![Payment Flow](ICPS Screenshots/payment-flow.png)
 
 ## Project Structure
 
