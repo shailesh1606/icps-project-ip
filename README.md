@@ -1,3 +1,7 @@
+# ICPS — Insurance Claim Processing System
+
+A full-stack microservices application built with Spring Boot, React + TypeScript, and MongoDB, providing secure authentication, policy management, and end‑to‑end insurance claim submission, review, and payment processing.
+
 ---
 
 ## Architecture
@@ -200,32 +204,30 @@ jwt.expiry=86400000   # 24 hours in ms
 | /admin        | ADMIN only    | Review pending claims, add policies    |
 
 ---
-
-
-
 ## Screenshots
-
+ 
 ### Login Page
 ![Login Page](screenshots/login.png)
-
+ 
 ### Registration Page
 ![Registration Page](screenshots/register.png)
-
+ 
 ### Policyholder Dashboard
 ![Dashboard](screenshots/dashboard.png)
-
+ 
 ### Submit a Claim
 ![Submit Claim](screenshots/submit-claim.png)
-
+ 
 ### Admin Panel — Review & Approve Claims
 ![Admin Panel](screenshots/admin-panel.png)
-
+ 
 ### Claim Approved → Payment Created
 ![Payment Flow](screenshots/payment-flow.png)
+ 
+---
 
 ## Project Structure
 
----
 ```
 icps/
 ├── auth-service/               # Spring Boot — Port 8081
@@ -262,3 +264,8 @@ icps/
         ├── components/{PrivateRoute,AdminRoute,Navbar}.tsx
         └── pages/{Login,Register,Dashboard,SubmitClaim,AdminPanel}.tsx
 ```
+
+
+
+what are the 5-6 most important screenshots that I must add in github readme 
+I will attach the doc containing the screenshots make sure you edit the readme for that 
