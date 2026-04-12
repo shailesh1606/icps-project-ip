@@ -218,7 +218,7 @@ jwt.expiry=86400000   # 24 hours in ms
 ### Submit a Claim
 ![Submit Claim](screenshots/submit-claim.png)
  
-### Admin Panel — Review & Approve Claims
+### Admin Panel — Review & Approve Claims, Add Policies
 ![Admin Panel](screenshots/admin-panel.png)
  
 ### Claim Approved → Payment Created
@@ -264,8 +264,3 @@ icps/
         ├── components/{PrivateRoute,AdminRoute,Navbar}.tsx
         └── pages/{Login,Register,Dashboard,SubmitClaim,AdminPanel}.tsx
 ```
-
-
-
-what are the 5-6 most important screenshots that I must add in github readme 
-I will attach the doc containing the screenshots make sure you edit the readme for that 
