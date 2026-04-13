@@ -15,7 +15,10 @@ const Login = () => {
     setError('');
     setLoading(true);
     try {
-      const res = await axios.post<AuthResponse>('http://localhost:8081/auth/login', { email, password });
+      const res = await axios.post<AuthResponse>(
+        `${import.meta.env.VITE_AUTH_API_URL}/auth/login`,
+        { email, password }
+      );
       const { token, policyHolderId, name, role } = res.data;
       localStorage.setItem('token', token);
       localStorage.setItem('policyHolderId', policyHolderId);

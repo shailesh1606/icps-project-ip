@@ -19,8 +19,8 @@ const Dashboard = () => {
     const fetchData = async () => {
       try {
         const [pRes, cRes] = await Promise.all([
-          axiosInstance.get('http://localhost:8082/policies/my'),
-          axiosInstance.get('http://localhost:8082/claims/my'),
+          axiosInstance.get('/policies/my'),
+          axiosInstance.get('/claims/my'),
         ]);
         setPolicies(pRes.data);
         setClaims(cRes.data);

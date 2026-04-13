@@ -13,7 +13,7 @@ const SubmitClaim = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    axiosInstance.get('http://localhost:8082/policies/my')
+    axiosInstance.get('/policies/my')
       .then(res => setPolicies(res.data))
       .catch(() => setError('Failed to load policies.'));
   }, []);
@@ -26,7 +26,7 @@ const SubmitClaim = () => {
     if (!form.claimAmount || Number(form.claimAmount) <= 0) { setError('Enter a valid claim amount.'); return; }
     setLoading(true);
     try {
-      await axiosInstance.post('http://localhost:8082/claims/submit', {
+      await axiosInstance.post('/claims/submit', {
         policyId: form.policyId,
         claimAmount: parseFloat(form.claimAmount),
         description: form.description,

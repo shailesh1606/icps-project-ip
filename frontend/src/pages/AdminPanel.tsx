@@ -25,7 +25,7 @@ const AdminPanel = () => {
   const fetchPendingClaims = async () => {
     setLoadingClaims(true);
     try {
-      const res = await axiosInstance.get('http://localhost:8082/claims/pending');
+      const res = await axiosInstance.get('/claims/pending');
       setClaims(res.data);
     } catch {
       setError('Failed to load pending claims.');
@@ -39,7 +39,7 @@ const AdminPanel = () => {
     setError('');
     setSuccess('');
     try {
-      await axiosInstance.patch(`http://localhost:8082/claims/${claimId}/status`, { claimStatus: status });
+      await axiosInstance.patch(`/claims/${claimId}/status`, { claimStatus: status });
       setSuccess(`Claim ${status === 'APPROVED' ? 'approved' : 'rejected'} successfully.`);
       setClaims(prev => prev.filter(c => c.claimId !== claimId));
     } catch {
@@ -55,7 +55,7 @@ const AdminPanel = () => {
     setPolicySuccess('');
     setPolicyLoading(true);
     try {
-      await axiosInstance.post('http://localhost:8082/policies/add', {
+      await axiosInstance.post('/policies/add', {
         ...policyForm,
         coverageAmount: parseFloat(policyForm.coverageAmount),
         premiumAmount: parseFloat(policyForm.premiumAmount),
