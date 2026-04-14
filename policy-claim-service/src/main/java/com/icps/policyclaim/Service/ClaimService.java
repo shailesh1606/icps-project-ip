@@ -4,6 +4,7 @@ import com.icps.policyclaim.Model.Claim;
 import com.icps.policyclaim.Repository.ClaimRepository;
 import com.icps.policyclaim.Repository.PolicyRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -25,7 +26,8 @@ public class ClaimService {
     @Autowired
     private RestTemplate restTemplate;
 
-    private static final String PAYMENT_SERVICE_URL = "http://localhost:8083/payments/create";
+    @Value("${payment.service.url}")
+    private String paymentServiceUrl;
 
     public Claim submitClaim(Claim claim, String policyHolderId) {
         policyRepository.findById(claim.getPolicyId())
@@ -71,7 +73,7 @@ public class ClaimService {
         paymentRequest.put("paymentMode", "BANK_TRANSFER");
 
         try {
-            restTemplate.postForObject(PAYMENT_SERVICE_URL, paymentRequest, Map.class);
+            restTemplate.postForObject(paymentServiceUrl, paymentRequest, Map.class);
         } catch (Exception e) {
             System.err.println("Payment service call failed: " + e.getMessage());
         }
